@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
 body {
     margin: 0;
@@ -359,3 +360,37 @@ body {
             background: rgba(159, 197, 255, 0.35);
             box-shadow: 0 0 12px rgba(159, 197, 255, 0.6);
         }
+.crystal-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 32px;
+    text-align: center;
+    padding: 8px 20px; /* Antes 14px → ahora más compacto */
+    margin-top: -10px; /* Sube el título dentro de la caja */
+    margin-bottom: 18px;
+    color: #e6f0ff;
+    background: rgba(30, 50, 80, 0.55);
+    border: 2px solid rgba(120, 170, 255, 0.35);
+    border-radius: 10px;
+    text-shadow: 0 0 3px rgba(120, 170, 255, 0.25);
+    backdrop-filter: blur(4px);
+}
+
+
+.crystal-section {
+    background: rgba(10, 25, 45, 0.45);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 18px;
+    border: 2px solid rgba(100, 160, 220, 0.35);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 18px rgba(0, 120, 255, 0.25);
+}
+
+
+    /* TEXTO INTERNO CON TU FUENTE PERSONALIZADA */
+    .crystal-section p {
+        font-family: 'FuenteOriginal', sans-serif; /* Tu fuente */
+        font-size: 18px;
+        line-height: 1.6;
+        color: #e8f4ff;
+    }

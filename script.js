@@ -1,4 +1,4 @@
-
+audio.volume = 1;
 particlesJS({
     "particles": {
         "number": {

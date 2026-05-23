@@ -81,6 +81,35 @@
         </audio>
 
         <h3>Descripción del Juego</h3>
+        <section id="descripcion-juego" class="crystal-section">
+            <h2 class="crystal-title">DESCRIPCIÓN</h2>
+            <p>
+                “El Legado de los Cristales” es un videojuego de aventura y fantasía donde el jugador
+                explora un mundo dividido por los cuatro elementos. A través de combates, exploración
+                y decisiones narrativas, el jugador deberá restaurar el equilibrio perdido y descubrir
+                el origen del poder cristalino.
+            </p>
+        </section>
+
+        <section id="historia-juego" class="crystal-section">
+            <h2 class="crystal-title">HISTORIA</h2>
+            <p>
+                Hace siglos, los Cristales Elementales protegían el mundo. Pero una fuerza desconocida
+                los fragmentó, liberando caos y criaturas corrompidas. El protagonista, portador de un
+                fragmento ancestral, emprende un viaje para reunir los cristales, enfrentarse a los
+                Guardianes caídos y desvelar la verdad detrás de la ruptura.
+            </p>
+        </section>
+
+        <section id="gameplay-juego" class="crystal-section">
+            <h2 class="crystal-title">GAMEPLAY</h2>
+            <p>
+                El juego combina exploración en mapas abiertos, combates dinámicos, resolución de
+                puzles elementales y progresión del personaje. Cada cristal desbloquea habilidades
+                únicas: fuego ofensivo, agua curativa, viento de movilidad y tierra defensiva. El
+                jugador deberá dominar estas mecánicas para avanzar y enfrentarse a jefes elementales.
+            </p>
+        </section>
 
 
         <!-- ========================= -->
@@ -257,7 +286,8 @@
     </div>
 
 
-    <script>/*
+    <script>
+/*
     var disqus_config = function () {
          this.page.url = window.location.href;
          this.page.identifier = "comentarios-pagina";
@@ -272,6 +302,18 @@
     })();</script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script id="dsq-count-scr" src="//el-legado-de-los-cristales.disqus.com/count.js" async></script>
+
+    <audio id="musica-fondo" src="audio/CancionOriginal.mp3" loop></audio>
+
+    <script>
+        window.addEventListener("load", () => {
+        const audio = document.getElementById("musica-fondo");
+        audio.volume = 0.4;
+            audio.play().catch(() => {
+                document.addEventListener("click", () => audio.play(), { once: true });
+            });
+        });
+    </script>
 
 </body>
 </html>

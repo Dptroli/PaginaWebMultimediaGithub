@@ -394,3 +394,23 @@ body {
         line-height: 1.6;
         color: #e8f4ff;
     }
+.music-title {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #e8f4ff;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    text-align: center; /* centrado */
+}
+
+.music-text {
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    color: #dce9f7;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center; /* también centrado si lo quieres uniforme */
+}
+
+
+

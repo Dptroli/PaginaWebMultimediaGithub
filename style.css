@@ -1,0 +1,357 @@
+﻿@font-face {
+    font-family: "Fuenteoriginal";
+    src: url("fonts/FuenteOriginalOTF.otf") format("opentype"), url("fonts/FuenteOriginalTTF.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Montserrat", sans-serif;
+    background: #0d1b2a; /* azul oscuro */
+    color: #ffffff;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CAJA DEL TÍTULO */
+.title-box {
+    background: #1b263b; /* color sólido, sin degradado */
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 2px solid #415a77;
+}
+
+/* TÍTULO PRINCIPAL DEL JUEGO */
+.title {
+    font-family: "Fuenteoriginal", serif;
+    font-size: 2.6rem;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #e0eaff;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.section-title {
+    font-family: "Fuenteoriginal", serif;
+    font-size: 2rem;
+    background: #1b263b;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #415a77;
+    color: #e0eaff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 8px rgba(159, 197, 255, 0.4);
+}
+
+/* SUBTÍTULOS IMPORTANTES */
+.subtitle {
+    font-family: "Fuenteoriginal", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #9fc5ff;
+    margin-bottom: 25px;
+}
+
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dce6f7;
+}
+/* NAVBAR FIJA */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 38, 59, 0.85); /* tu color, pero translúcido */
+    padding: 15px;
+    border-bottom: 2px solid #415a77;
+    backdrop-filter: blur(6px); /* efecto cristal */
+    z-index: 999;
+}
+
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .navbar a {
+        color: #e0eaff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+        .navbar a:hover {
+            color: #9fc5ff;
+        }
+
+/* IMAGEN PRINCIPAL */
+.main-image {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 3px solid #415a77;
+    box-shadow: 0 0 20px rgba(159, 197, 255, 0.4);
+}
+.logo-equipo {
+    width: 180px;
+    height: auto;
+    margin-top: 15px;
+    filter: drop-shadow(0 0 10px rgba(159, 197, 255, 0.35));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+    .logo-equipo:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 14px rgba(255, 90, 90, 0.6));
+    }
+
+
+/* SECCIONES */
+.section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* EQUIPO */
+.team-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+/* ========================= */
+/*     CONTRIBUCIONES        */
+/* ========================= */
+
+.tiers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tier-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    border: 2px solid #415a77;
+    box-shadow: 0 0 12px rgba(159, 197, 255, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .tier-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 18px rgba(159, 197, 255, 0.5);
+    }
+
+    .tier-card h3 {
+        margin: 0 0 10px 0;
+        font-family: "Cinzel", serif;
+        color: #e0eaff;
+    }
+
+    .tier-card p {
+        margin: 0;
+        color: #dce6f7;
+    }
+
+/* Colores temáticos */
+.tier-blue {
+    border-left: 5px solid #4da3ff;
+}
+
+.tier-purple {
+    border-left: 5px solid #b57bff;
+}
+
+.tier-gold {
+    border-left: 5px solid #ffd86b;
+}
+
+/* ========================= */
+/*     PRESUPUESTO / GOALS   */
+/* ========================= */
+
+.budget-container {
+    margin-top: 20px;
+    padding: 25px;
+    background: #1b263b;
+    border-radius: 15px;
+    border: 2px solid #415a77;
+    box-shadow: 0 0 20px rgba(65, 90, 119, 0.4);
+}
+
+.budget-item {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 5px solid #9fc5ff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .budget-item:hover {
+        transform: translateX(8px);
+        box-shadow: 0 0 18px rgba(159, 197, 255, 0.5);
+    }
+
+    .budget-item h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+        color: #9fc5ff;
+    }
+
+    .budget-item p {
+        margin: 0;
+        color: #dce6f7;
+        line-height: 1.6;
+    }
+
+/* Colores de brillo */
+.glow-blue {
+    border-left-color: #4da3ff;
+}
+
+.glow-purple {
+    border-left-color: #b57bff;
+}
+
+.glow-cyan {
+    border-left-color: #4dfff3;
+}
+
+.glow-green {
+    border-left-color: #4df5a3;
+}
+
+.glow-orange {
+    border-left-color: #ffb84d;
+}
+
+.glow-red {
+    border-left-color: #ff6b6b;
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+/* PANEL FAQ ESTILO CRYSTAL UI */
+.faq-panel {
+    background: rgba(13, 27, 42, 0.6);
+    border: 1px solid rgba(159, 197, 255, 0.35);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.faq-panel:hover {
+    box-shadow: 0 0 18px rgba(159, 197, 255, 0.45);
+    transform: translateY(-3px);
+}
+
+/* CABECERA */
+.faq-header {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(65, 90, 119, 0.4), rgba(13, 27, 42, 0));
+    border: none;
+    color: #e0eaff;
+    text-align: left;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ICONO */
+.faq-icon {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #9fc5ff;
+}
+
+.faq-header.active .faq-icon {
+    transform: rotate(45deg);
+    color: #4dfff3;
+}
+
+/* CONTENIDO */
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 18px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-body p {
+    color: #dce6f7;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+/* BARRA DE REDES SOCIALES LATERAL */
+.social-bar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(159, 197, 255, 0.15);
+    border: 2px solid rgba(159, 197, 255, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+    .social-icon img {
+        width: 26px;
+        height: 26px;
+        filter: drop-shadow(0 0 4px rgba(159, 197, 255, 0.6));
+    }
+
+    /* EFECTO HOVER */
+    .social-icon:hover {
+        transform: scale(1.15);
+        background: rgba(159, 197, 255, 0.35);
+        box-shadow: 0 0 12px rgba(159, 197, 255, 0.6);
+    }

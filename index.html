@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
+    <!-- Fuentes de texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div id="particles-js"></div>
 
 
-    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- Navbar -->
     <nav class="navbar">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -35,7 +35,7 @@
 
         <h2 class="subtitle">“Cuatro Cristales. Un linaje roto. Un mundo al borde del colapso.”</h2>
 
-        <!-- IMAGEN PRINCIPAL -->
+        <!-- Portada Videojuego -->
         <img src="img/portada_juego.jpeg" alt="Imagen principal del videojuego" class="main-image">
 
         <p class="description">
@@ -46,14 +46,14 @@
             recuperar cada cristal, restaurar el equilibrio y descubrir la verdad oculta tras el sacrificio de tu familia.
         </p>
 
-        <!-- AUTORÍA -->
+        <!-- Autoria Empresa -->
         <section class="autoria">
             <h3>Autoría</h3>
             <p>Desarrollado por <strong>ADASC & CO</strong></p>
             <img src="img/logo.png" class="logo-equipo">
         </section>
 
-        <!-- DISCLAIMER -->
+        <!-- Disclaimer -->
         <section class="disclaimer">
             <p>
                 <strong>ATENCIÓN:</strong> Esta página simula la campaña de microfinanciación de un videojuego ficticio y no
@@ -64,15 +64,18 @@
 
     </main>
 
-    <!-- SECCIÓN CAMPAÑA -->
+    <!-- Campaña -->
     <section id="campania" class="section">
         <h2 class="section-title">La Campaña</h2>
 
-        <h3>Vídeo Promocional</h3>
-        <video controls width="500">
-            <source src="video/trailer.mp4" type="video/mp4">
-            Tu navegador no soporta el vídeo.
-        </video>
+        <section id="video-promocional">
+            <h2>Vídeo Promocional</h2>
+            <video controls class="video-promocional">
+                <source src="video/promocional.mp4" type="video/mp4">
+            </video>
+        </section>
+
+
 
         <h2 class="music-title">Canción Original</h2>
         <p class="music-text">
@@ -83,7 +86,7 @@
 
 
 
-        <h3>Descripción del Juego</h3>
+ 
         <section id="descripcion-juego" class="crystal-section">
             <h2 class="crystal-title">DESCRIPCIÓN</h2>
             <p>
@@ -113,11 +116,7 @@
                 jugador deberá dominar estas mecánicas para avanzar y enfrentarse a jefes elementales.
             </p>
         </section>
-
-
-        <!-- ========================= -->
-        <!--   SECCIÓN CONTRIBUCIONES  -->
-        <!-- ========================= -->
+        <!--  Contribuciones  -->
 
         <section id="contribuciones" class="section">
             <h2 class="section-title">Contribuciones</h2>
@@ -130,20 +129,19 @@
                 </div>
 
                 <div class="tier-card tier-purple">
-                    <h3>25€ — AVENTURERO</h3>
+                    <h3>25€ — APORTACIÓN ESTÁNDAR</h3>
                     <p>Copia digital del juego + recompensas anteriores.</p>
                 </div>
 
                 <div class="tier-card tier-gold">
-                    <h3>50€ — GUARDIÁN DEL CRISTAL</h3>
+                    <h3>50€ — COLABORADOR PRINCIPAL</h3>
                     <p>Libro de arte digital + recompensas anteriores.</p>
                 </div>
 
             </div>
 
-            <!-- ========================= -->
-            <!--     PRESUPUESTO / GOALS   -->
-            <!-- ========================= -->
+            <!--  Presupuesto   -->
+
 
             <h2 class="section-title">Presupuesto — Objetivos Alcanzados</h2>
 
@@ -186,6 +184,7 @@
 
 
     </section>
+    <!--  Preguntas Frecuentes   -->
     <section id="faq" class="section">
         <h2 class="section-title">Preguntas Frecuentes</h2>
 
@@ -253,14 +252,13 @@
 
 
 
-    <!-- COMENTARIOS -->
+    <!-- Comentarios -->
     <section id="comentarios" class="section">
         <h2 class="section-title">Comentarios</h2>
-        <!-- Aquí puedes insertar Disqus u otro sistema -->
         <div id="disqus_thread"></div>
     </section>
 
-    <!-- EQUIPO -->
+    <!-- Equipon de desarrollo -->
     <section id="equipo" class="section">
         <h2 class="section-title">Equipo de Desarrollo</h2>
 
@@ -272,22 +270,40 @@
             <li><strong>Silvia Vidal</strong> – Arte conceptual y UI</li>
         </ul>
     </section>
+    <!-- Redes Sociales -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="script.js"></script>
     <div class="social-bar">
-        <a href="https://twitter.com/" class="social-icon">
+        <a href="https://x.com/crystallslegacy?s=21&t=HK2vbjpsy6YypAfAzYzvSQ" class="social-icon">
             <img src="img/social/twitter.png" alt="Twitter">
         </a>
 
-        <a href="https://instagram.com/" class="social-icon">
+        <a href="https://www.instagram.com/crystals.legacy?igsh=d3V2N2hjNmZwMnQ5" class="social-icon">
             <img src="img/social/instagram.png" alt="Instagram">
         </a>
 
-        <a href="https://youtube.com/" class="social-icon">
+        <a href="https://www.youtube.com/@crystalslegacy" class="social-icon">
             <img src="img/social/youtube.png" alt="YouTube">
+        </a>
+        <a class="social-icon music-btn" onclick="toggleMusic()">
+            🎵
         </a>
     </div>
 
+    <audio id="bgMusic" src="audio/CancionOriginal.mp3" autoplay loop></audio>
+    <script>
+    const music = document.getElementById("bgMusic");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+    }
+    </script>
+
+    <!-- DISQUS -->
 
     <script>
 /*
@@ -306,17 +322,9 @@
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script id="dsq-count-scr" src="//el-legado-de-los-cristales.disqus.com/count.js" async></script>
 
-    <audio id="musica-fondo" src="audio/CancionOriginal.mp3" loop></audio>
-
+    <!-- Video Promocional -->
     <script>
-        window.addEventListener("load", () => {
-        const audio = document.getElementById("musica-fondo");
-        audio.volume = 0.4;
-            audio.play().catch(() => {
-                document.addEventListener("click", () => audio.play(), { once: true });
-            });
-        });
-    </script>
-
+const video = document.getElementById("videoPromo");
+    video.volume = 0.5;</script>
 </body>
 </html>

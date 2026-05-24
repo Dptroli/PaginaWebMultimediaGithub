@@ -1,4 +1,4 @@
-audio.volume = 1;
+//Particulas
 particlesJS({
     "particles": {
         "number": {
@@ -51,7 +51,7 @@ particlesJS({
     },
     "retina_detect": true
 });
-// FAQ Crystal UI
+// FAQ
 const faqHeaders = document.querySelectorAll(".faq-header");
 
 faqHeaders.forEach(header => {
